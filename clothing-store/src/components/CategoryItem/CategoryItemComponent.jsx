@@ -1,5 +1,6 @@
 import React from "react";
 import "./CategoryItem.styles.scss";
+
 const CategoryItemComponent = ({ category }) => {
   const { imageUrl, title } = category;
   return (
@@ -7,11 +8,10 @@ const CategoryItemComponent = ({ category }) => {
       <div
         className="background-image"
         style={{ backgroundImage: `url(${imageUrl})` }}
-      >
-        <div className="category-body-container">
-          <h2>{title}</h2>
-          <p>Shop Now</p>
-        </div>
+      />
+      <div className="category-body-container">
+        <h2>{title}</h2>
+        <p>Shop Now</p>
       </div>
     </div>
   );
