@@ -25,15 +25,17 @@ const RegisterComponent = () => {
   };
   const handleSubmit = async (event) => {
     event.preventDefault();
-
     if (password !== confirmPassword) {
       alert("Passwords dont match");
       return;
     }
-
     try {
-      const { user } = createAuthUserWithEmailAndPassword(email, password);
+      const { user } = await createAuthUserWithEmailAndPassword(
+        email,
+        password
+      );
       await createUserDocumentFromAuth(user, { displayName });
+
       resetFormFileds();
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {

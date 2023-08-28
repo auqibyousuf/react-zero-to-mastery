@@ -9,6 +9,8 @@ import {
 } from "../../utils/firebase/firebase.utils";
 
 import RegisterComponent from "../../components/Register/RegisterComponent";
+import Login from "../../components/Login/Login";
+import "./Authentication.scss";
 
 const LoginComponent = () => {
   useEffect(() => {
@@ -26,10 +28,8 @@ const LoginComponent = () => {
     const userDocRef = await createUserDocumentFromAuth(user);
   };
   return (
-    <div>
-      <h1>Sign In Page</h1>
-      <button onClick={logGoogleUser}>Log in with Google</button>
-      <button onClick={signInWithGoogleRedirect}>Log in with Redirect</button>
+    <div className="authentication-container">
+      <Login />
       <RegisterComponent />
     </div>
   );
