@@ -1,6 +1,7 @@
 // import CategoryComponent from "./components/Category/CategoryComponent";
 import { Outlet } from "react-router-dom";
 import CategoryItem from "../../components/CategoryItem/CategoryItem";
+import Category from "../../components/Category/Category";
 
 const Home = () => {
   const categories = [
@@ -34,9 +35,7 @@ const Home = () => {
     <div>
       <Outlet />
       <div className="categories-container">
-        {categories.map((category) => (
-          <CategoryItem key={category.id} category={category} />
-        ))}
+        <Category categories={categories} />
       </div>
     </div>
   );
