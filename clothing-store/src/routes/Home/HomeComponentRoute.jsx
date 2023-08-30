@@ -1,6 +1,5 @@
 // import CategoryComponent from "./components/Category/CategoryComponent";
 import { Outlet } from "react-router-dom";
-import CategoryItem from "../../components/CategoryItem/CategoryItem";
 import Category from "../../components/Category/Category";
 
 const Home = () => {
